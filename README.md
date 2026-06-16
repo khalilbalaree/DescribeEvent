@@ -1,6 +1,6 @@
 # Can LLMs Access their World Knowledge for Event Prediction?
 
-Code for event sequence prediction experiments across seven datasets.
+Recent work has questioned whether LLMs can use pretrained world knowledge for temporal event prediction. This project studies event forecasting as an interface problem: grounding events with natural-language descriptions and using symbolic labels to separate event semantics from the prediction space. It introduces DESCRIBEEVENT, a benchmark of about 150K events across seven datasets and six domains, and evaluates when capable LLMs benefit from descriptions and symbolic labels compared with description-free variants and non-LLM baselines.
 
 ## Datasets
 
