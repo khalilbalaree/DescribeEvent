@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Local environments and secrets
+.env
+.env.*
+.venv/
+venv/
+
+# Experiment outputs and generated caches
+.cache/
+**/results_*/
+**/logs/
+**/slurm_*.out
+**/slurm_*.err
+**/exp_log.txt
+**/.event_types_cache.json
+outputs/
+
+# OS/editor files
+.DS_Store
+.vscode/
+.idea/
