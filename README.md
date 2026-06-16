@@ -30,6 +30,8 @@ export OPENROUTER_API_KEY=<your-openrouter-key>
 
 ## Running Experiments
 
+Model and decoding parameters are set in each dataset's `config.py`.
+
 Each driver runs four prompt variants:
 
 1. Semantic event type with description
