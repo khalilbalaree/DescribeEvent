@@ -18,7 +18,7 @@ The following dataset configurations are included:
 
 Use Python 3.10 or later.
 
-Install the dependencies:
+Install the dependencies for OpenRouter runs and baselines:
 
 ```bash
 pip install -r requirements.txt
@@ -29,6 +29,8 @@ Set the OpenRouter API key through an environment variable. Do not edit credenti
 ```bash
 export OPENROUTER_API_KEY=<your-openrouter-key>
 ```
+
+Local vLLM runs require a vLLM-capable environment.
 
 Driver scripts use a Conda environment named `event-prediction` by default. Override it with:
 
@@ -48,6 +50,9 @@ Each driver runs four prompt variants:
 ```bash
 # OpenRouter API
 bash <dataset>/run_openrouter.sh
+
+# Local vLLM
+bash <dataset>/run_experiments.sh
 ```
 
 You can also call the shared entrypoint directly:

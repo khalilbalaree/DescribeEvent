@@ -80,25 +80,13 @@ CATEGORY_ID_TO_TYPE = {cat: {v: k for k, v in mapping.items()} for cat, mapping 
 
 # OpenRouter (used when --engine openrouter)
 OPENROUTER_CONFIG = {
-    "model": "openai/gpt-5-mini",
+    "model": "google/gemini-2.5-flash",
     "rpm": 60,
     "temperature": None,
     "top_p": None,
     "max_output_tokens": None,
-    "reasoning": {"effort": "minimal"},
+    "reasoning": {"effort": "none"},
     "batch_size": 10,
-}
-
-# Gemini — empty = use API defaults
-GEMINI_CONFIG = {
-    "model": "gemini-2.5-flash",
-    "rpm": 60,
-    "temperature": None,
-    "top_p": None,
-    "max_output_tokens": None,
-    "reasoning": {"budget": 0},
-    "batch_mode": True,
-    "batch_poll_interval": 600,
 }
 
 # Backward-compat defaults (inference.py imports these at module level)

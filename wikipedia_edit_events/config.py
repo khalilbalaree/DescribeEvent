@@ -59,25 +59,15 @@ EVENT_TYPES = [
 
 # OpenRouter (used when --engine openrouter)
 OPENROUTER_CONFIG = {
-    "model": "openai/gpt-5-mini",
+    "model": "google/gemini-2.5-flash",
     "rpm": 60,
     "temperature": None,
     "top_p": None,
     "max_output_tokens": None,
-    "reasoning": {"effort": "minimal"},
+    "reasoning": {"effort": "none"},
     "batch_size": 10,
 }
 
-
-# Gemini — empty = use API defaults
-GEMINI_CONFIG = {
-    "model": "google/gemini-3-flash-preview",
-    "rpm": 60,
-    "temperature": None,
-    "top_p": None,
-    "max_output_tokens": None,
-    "reasoning": {"effort": "MINIMAL"},
-}
 
 # Anonymous type mapping (for ablation)
 # TYPE_TO_ID = {t: f"type_{i}" for i, t in enumerate(EVENT_TYPES)}

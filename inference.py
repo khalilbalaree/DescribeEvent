@@ -45,7 +45,7 @@ def parse_args():
                         help="Replace type names with anonymous IDs (no text)")
     parser.add_argument("--anon-with-text", action="store_true",
                         help="Anonymous type IDs but keep event descriptions")
-    parser.add_argument("--engine", type=str, choices=["vllm", "openrouter", "gemini"],
+    parser.add_argument("--engine", type=str, choices=["vllm", "openrouter"],
                         default="vllm", help="Inference engine (default: vllm)")
     parser.add_argument("--rpm", type=int, default=None,
                         help="Requests per minute for OpenRouter rate limiting")
@@ -105,12 +105,10 @@ def main():
     else:
         config_module_tmp = __import__('config')
         if args.engine == "openrouter":
-            model_id = (getattr(config_module_tmp, "OPENROUTER_CONFIG", None) or {}).get("model", "openai/gpt-oss-120b")
-        elif args.engine == "gemini":
-            model_id = (getattr(config_module_tmp, "GEMINI_CONFIG", None) or {}).get("model", "gemini-3-flash-preview")
+            model_id = (getattr(config_module_tmp, "OPENROUTER_CONFIG", None) or {}).get("model", "google/gemini-2.5-flash")
         else:
             model_id = MODEL_NAME
-        # Use part after '/' (e.g. "openai/gpt-oss-120b" -> "gpt-oss-120b")
+        # Use part after '/' (e.g. "google/gemini-2.5-flash" -> "gemini-2.5-flash")
         model_short = model_id.split("/")[-1] if "/" in model_id else model_id
         results_dir = os.path.join(args.config_dir or ".", f"results_{model_short}")
         if os.path.exists(results_dir):

@@ -23,7 +23,7 @@ class OpenRouterEngine(BaseApiEngine):
                 "OpenRouter API key must be set in OPENROUTER_CONFIG['api_key'] or OPENROUTER_API_KEY env var"
             )
 
-        self.model = config_dict.get("model", "openai/gpt-oss-120b")
+        self.model = config_dict.get("model", "google/gemini-2.5-flash")
         self.reasoning = config_dict.get("reasoning", None)
         self.provider = config_dict.get("provider", None)
         rpm = rpm_override or config_dict.get("rpm", 20)

@@ -16,8 +16,8 @@ from runtime_config import configure_runtime
 MODEL_CACHE_DIR, DATASET_CACHE_DIR = configure_runtime()
 
 # Model
-MODEL_NAME = "Qwen/Qwen3.5-4B"
-TENSOR_PARALLEL_SIZE = 1
+MODEL_NAME = "Qwen/Qwen3.5-27B"
+TENSOR_PARALLEL_SIZE = 2
 MAX_MODEL_LEN = 32768
 GPU_MEMORY_UTILIZATION = 0.90
 
@@ -62,23 +62,13 @@ EVENT_TYPES = [
 
 # OpenRouter (used when --engine openrouter)
 OPENROUTER_CONFIG = {
-    "model": "x-ai/grok-4.1-fast",
+    "model": "google/gemini-2.5-flash",
     "rpm": 60,
     "temperature": None,
     "top_p": None,
     "max_output_tokens": None,
-    "reasoning": {"enabled": False},
+    "reasoning": {"effort": "none"},
     "batch_size": 10,
-}
-
-# Gemini — empty = use API defaults
-GEMINI_CONFIG = {
-    "model": "gemini-2.5-flash",
-    "rpm": 60,
-    "temperature": None,
-    "top_p": None,
-    "max_output_tokens": None,
-    "reasoning": {"budget": 0},
 }
 
 # Anonymous type mapping (for ablation)

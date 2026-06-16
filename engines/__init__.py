@@ -29,8 +29,5 @@ def create_engine(engine_type, config_module, **kwargs):
     elif engine_type == "openrouter":
         from engines.openrouter_engine import OpenRouterEngine
         return OpenRouterEngine(config_module, **kwargs)
-    elif engine_type == "gemini":
-        from engines.gemini_engine import GeminiEngine
-        return GeminiEngine(config_module, **kwargs)
     else:
         raise ValueError(f"Unknown engine type: {engine_type}")

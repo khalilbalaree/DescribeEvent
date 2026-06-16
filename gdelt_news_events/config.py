@@ -67,25 +67,13 @@ else:
 
 # OpenRouter (used when --engine openrouter)
 OPENROUTER_CONFIG = {
-    "model": "openai/gpt-5.4-mini",
+    "model": "google/gemini-2.5-flash",
     "rpm": 60,
     "temperature": 0.7,
     "top_p": None,
     "max_output_tokens": None,
     "reasoning": {"effort": "none"},
     "batch_size": 10,
-}
-
-# Gemini — empty = use API defaults
-GEMINI_CONFIG = {
-    "model": "google/gemini-3-flash-preview",
-    "rpm": 60,
-    "temperature": None,
-    "top_p": None,
-    "max_output_tokens": None,
-    "reasoning": {"effort": "MINIMAL"},
-    "batch_mode": True,
-    "batch_poll_interval": 30,
 }
 
 # Anonymous type mapping (for ablation)
