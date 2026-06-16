@@ -1,10 +1,8 @@
 # Event Sequence Prediction Experiments
 
-This repository contains code for event sequence prediction experiments across seven datasets. Each dataset lives in its own directory with a `config.py`, `prompts.py`, and driver scripts. All model experiments use the shared `inference.py` entrypoint at the repository root.
+Code for event sequence prediction experiments across seven datasets.
 
 ## Datasets
-
-The following dataset configurations are included:
 
 - `amazon_review_events/`
 - `earthquake_region_events/`
@@ -16,23 +14,15 @@ The following dataset configurations are included:
 
 ## Prerequisites
 
-Use Python 3.10 or later.
-
-Install the dependencies for OpenRouter runs and baselines:
+Python 3.10+.
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Set the OpenRouter API key through an environment variable. Do not edit credentials into config files.
-
 ```bash
 export OPENROUTER_API_KEY=<your-openrouter-key>
 ```
-
-Local vLLM runs require a vLLM-capable environment.
-
-Driver scripts use a Conda environment named `event-prediction` by default. Override it with:
 
 ```bash
 export CONDA_ENV=<your-conda-env-name>
@@ -55,13 +45,9 @@ bash <dataset>/run_openrouter.sh
 bash <dataset>/run_vllm.sh
 ```
 
-You can also call the shared entrypoint directly:
-
 ```bash
 python inference.py --config-dir github_repo_events --engine openrouter --debug
 ```
-
-Run baseline methods with:
 
 ```bash
 python -m baselines.run --config-dir github_repo_events --method knn_subseq --debug
@@ -69,11 +55,11 @@ python -m baselines.run --config-dir github_repo_events --method knn_subseq --de
 
 ## Outputs
 
-Experiment outputs are written to dataset-local `results_*` directories. Generated outputs, logs, caches, local environments, and credentials files are ignored by Git.
+Experiment outputs are written to dataset-local `results_*` directories.
 
 ## Data
 
-This repository does not include or redistribute dataset files. Dataset configurations reference public Hugging Face datasets from `DescribeEvents` through `datasets.load_dataset`, so no Hugging Face token is required.
+Dataset configurations use public Hugging Face datasets from `DescribeEvents`.
 
 ## License
 
