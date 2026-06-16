@@ -4,6 +4,8 @@ Code for event sequence prediction experiments across seven datasets.
 
 ## Datasets
 
+Hugging Face: https://huggingface.co/DescribeEvents
+
 - `amazon_review_events/`
 - `earthquake_region_events/`
 - `gdelt_news_events/`
