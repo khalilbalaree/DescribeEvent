@@ -18,34 +18,16 @@ The following dataset configurations are included:
 
 Use Python 3.10 or later.
 
-Install the directly imported packages:
+Install the dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-For the original pinned vLLM environment, use `requirements-vllm-full.txt`. The full environment file includes transitive dependencies and GPU-specific packages.
-
-Set credentials through environment variables. Do not edit credentials into config files.
+Set the OpenRouter API key through an environment variable. Do not edit credentials into config files.
 
 ```bash
-export HF_TOKEN=<your-huggingface-token>        # only needed for gated/private datasets
-export OPENROUTER_API_KEY=<your-openrouter-key> # needed for OpenRouter runs
-export GEMINI_API_KEY=<your-gemini-key>         # needed for Gemini runs
-```
-
-Runtime caches default to `.cache/` inside the repository and can be overridden:
-
-```bash
-export EVENT_PREDICTION_CACHE_DIR=/path/to/cache
-export MODEL_CACHE_DIR=/path/to/model-cache
-export DATASET_CACHE_DIR=/path/to/dataset-cache
-```
-
-For local vLLM runs, set GPU visibility in your shell if needed:
-
-```bash
-export CUDA_VISIBLE_DEVICES=0,1
+export OPENROUTER_API_KEY=<your-openrouter-key>
 ```
 
 Driver scripts use a Conda environment named `event-prediction` by default. Override it with:
@@ -64,14 +46,8 @@ Each driver runs four prompt variants:
 4. Anonymous event types with text
 
 ```bash
-# Local vLLM
-bash <dataset>/run_experiments.sh
-
 # OpenRouter API
 bash <dataset>/run_openrouter.sh
-
-# Gemini API where available
-bash gdelt_news_events/run_gemini.sh
 ```
 
 You can also call the shared entrypoint directly:
@@ -92,7 +68,7 @@ Experiment outputs are written to dataset-local `results_*` directories. Generat
 
 ## Data
 
-This repository does not include or redistribute dataset files. Dataset configurations reference hosted Hugging Face datasets from `DescribeEvents` through `datasets.load_dataset`.
+This repository does not include or redistribute dataset files. Dataset configurations reference public Hugging Face datasets from `DescribeEvents` through `datasets.load_dataset`, so no Hugging Face token is required.
 
 ## License
 
