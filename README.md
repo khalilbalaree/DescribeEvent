@@ -42,8 +42,10 @@ Each driver runs four prompt variants:
 bash <dataset>/run_openrouter.sh
 
 # Local vLLM
-bash <dataset>/run_vllm.sh
+CUDA_VISIBLE_DEVICES=0,1 bash <dataset>/run_vllm.sh
 ```
+
+Local vLLM experiments use `TENSOR_PARALLEL_SIZE = 2` by default and were run on 2 NVIDIA RTX A6000 48GB GPUs. Set `CUDA_VISIBLE_DEVICES` to choose the two GPUs.
 
 ## Outputs
 
