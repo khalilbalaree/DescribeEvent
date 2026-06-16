@@ -81,6 +81,6 @@ OPENROUTER_CONFIG = {
 # Random anon: each event gets a random type_N label (sanity check)
 # RANDOM_ANON = True
 RANDOM_ANON = False
-PREPEND_SEMANTIC_LABEL = True
+PREPEND_SEMANTIC_LABEL = False
 TYPE_TO_ID = {t: f"type_{i}" for i, t in enumerate(EVENT_TYPES)}
 ID_TO_TYPE = {v: k for k, v in TYPE_TO_ID.items()}

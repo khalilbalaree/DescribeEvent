@@ -74,7 +74,7 @@ CATEGORY_EVENT_TYPES = {cat: sorted(types) for cat, types in _cat_types.items()}
 
 # Random anon: each event gets a random type_N label (sanity check)
 RANDOM_ANON = False
-PREPEND_SEMANTIC_LABEL = True
+PREPEND_SEMANTIC_LABEL = False
 CATEGORY_TYPE_TO_ID = {cat: {t: f"type_{i}" for i, t in enumerate(types)} for cat, types in CATEGORY_EVENT_TYPES.items()}
 CATEGORY_ID_TO_TYPE = {cat: {v: k for k, v in mapping.items()} for cat, mapping in CATEGORY_TYPE_TO_ID.items()}
 

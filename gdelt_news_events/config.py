@@ -78,7 +78,7 @@ OPENROUTER_CONFIG = {
 
 # Anonymous type mapping (for ablation)
 RANDOM_ANON = False
-PREPEND_SEMANTIC_LABEL = True
+PREPEND_SEMANTIC_LABEL = False
 TYPE_TO_ID = {t: f"type_{i}" for i, t in enumerate(EVENT_TYPES)}
 
 # Shuffled letters (no ordering)
