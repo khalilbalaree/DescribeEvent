@@ -45,14 +45,6 @@ bash <dataset>/run_openrouter.sh
 bash <dataset>/run_vllm.sh
 ```
 
-```bash
-python inference.py --config-dir github_repo_events --engine openrouter --debug
-```
-
-```bash
-python -m baselines.run --config-dir github_repo_events --method knn_subseq --debug
-```
-
 ## Outputs
 
 Experiment outputs are written to dataset-local `results_*` directories.
