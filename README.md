@@ -26,10 +26,6 @@ pip install -r requirements.txt
 export OPENROUTER_API_KEY=<your-openrouter-key>
 ```
 
-```bash
-export CONDA_ENV=<your-conda-env-name>
-```
-
 ## Running Experiments
 
 Each driver runs four prompt variants:
