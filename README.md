@@ -52,7 +52,7 @@ Each driver runs four prompt variants:
 bash <dataset>/run_openrouter.sh
 
 # Local vLLM
-bash <dataset>/run_experiments.sh
+bash <dataset>/run_vllm.sh
 ```
 
 You can also call the shared entrypoint directly:
