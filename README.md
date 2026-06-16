@@ -44,6 +44,11 @@ bash <dataset>/run_openrouter.sh
 
 Local vLLM experiments use `TENSOR_PARALLEL_SIZE = 2` by default and were run on 2 NVIDIA RTX A6000 48GB GPUs. Set `CUDA_VISIBLE_DEVICES=0,1` to choose the two GPUs.
 
+```bash
+# Local vLLM
+CUDA_VISIBLE_DEVICES=0,1 bash <dataset>/run_vllm.sh
+```
+
 ## Outputs
 
 Experiment outputs are written to dataset-local `results_*` directories.
