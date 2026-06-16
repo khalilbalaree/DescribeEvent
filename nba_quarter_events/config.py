@@ -30,7 +30,7 @@ PRESENCE_PENALTY = 1.5
 REPETITION_PENALTY = 1.0
 
 # Dataset
-DATASET_NAME = "XiaoBB/nba_quarter_events"
+DATASET_NAME = "DescribeEvents/nba_quarter_events"
 DATASET_SPLIT = "test"
 
 # Time configuration

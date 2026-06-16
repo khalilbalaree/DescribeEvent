@@ -92,7 +92,7 @@ Experiment outputs are written to dataset-local `results_*` directories. Generat
 
 ## Data
 
-This repository does not include or redistribute dataset files. Dataset configurations reference hosted Hugging Face datasets through `datasets.load_dataset`.
+This repository does not include or redistribute dataset files. Dataset configurations reference hosted Hugging Face datasets from `DescribeEvents` through `datasets.load_dataset`.
 
 ## License
 

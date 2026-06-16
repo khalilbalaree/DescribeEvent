@@ -22,7 +22,7 @@ MAX_MODEL_LEN = 32768
 GPU_MEMORY_UTILIZATION = 0.90
 
 # Dataset
-DATASET_NAME = "XiaoBB/amazon_review_events"
+DATASET_NAME = "DescribeEvents/amazon_review_events"
 DATASET_SPLIT = "test"
 
 # Time configuration

@@ -22,7 +22,7 @@ MAX_MODEL_LEN = 32768
 GPU_MEMORY_UTILIZATION = 0.90
 
 # Dataset
-DATASET_NAME = "XiaoBB/gdelt_news_events"
+DATASET_NAME = "DescribeEvents/gdelt_news_events"
 DATASET_SPLIT = "test"
 
 # Time configuration
