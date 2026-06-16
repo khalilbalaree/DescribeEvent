@@ -30,10 +30,10 @@ export OPENROUTER_API_KEY=<your-openrouter-key>
 
 Each driver runs four prompt variants:
 
-1. With event type text
-2. Without event type text
-3. Anonymous event types without text
-4. Anonymous event types with text
+1. Semantic event type with description
+2. Semantic event type without description
+3. Symbolic event type without description
+4. Symbolic event type with description
 
 ```bash
 # OpenRouter API
