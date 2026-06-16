@@ -1,4 +1,4 @@
-# Event Sequence Prediction Experiments
+# Can LLMs Access their World Knowledge for Event Prediction?
 
 Code for event sequence prediction experiments across seven datasets.
 
